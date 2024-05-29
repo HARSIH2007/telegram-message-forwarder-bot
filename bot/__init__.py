@@ -50,14 +50,14 @@ logging.info(f"Chats map: {chats_map}")
 if config["pyrogram"].get("bot_token"):
     app = Client(
         "bot",
-        api_id=config["pyrogram"]["api_id"],
-        api_hash=config["pyrogram"]["api_hash"],
-        bot_token=config["pyrogram"]["bot_token"],
+        api_id=config["pyrogram"]["api_id", "24898391"],
+        api_hash=config["pyrogram"]["api_hash", "ef9a614564b3815b1bef4d69d5c70217"],
+        bot_token=config["pyrogram"]["bot_token", "7146881882:AAH9QPJbdrsh3M4yQK77XA3IJN1LOyzJbg4"],
     )
 else:
     app = Client(
         "bot",
         api_id=config["pyrogram"]["api_id"],
-        api_hash=config["pyrogram"]["api_hash"],
+        api_hash=config["pyrogram"]["api_hash", "ef9a614564b3815b1bef4d69d5c70217"],
         session_string=config["pyrogram"]["session_string"],
     )
